@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>jhuapl.edu</spirit:vendor>
+  <spirit:library>T.Tso</spirit:library>
+  <spirit:name>radio_tuner</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">4</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI:m_axis</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>m_axis</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m_axis_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
+        <spirit:displayName>VHDL Synthesis</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>radio_tuner_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>55276086</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
+        <spirit:displayName>VHDL Simulation</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>radio_tuner_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>55276086</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_softwaredriver</spirit:name>
+        <spirit:displayName>Software Driver</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_softwaredriver_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>2fc81051</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0e5443b4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>16328387</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>m_axis_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">1</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m_axis_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">4</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/filt2.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/filt1.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/FIR_2/FIR_2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FIR_2_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/FIR_1/FIR_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FIR_1_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/cMult_0/cMult_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_cMult_0_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/Lo_DDS/Lo_DDS.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_Lo_DDS_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/DDS/DDS.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_DDS_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/radio_tuner_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/radio_tuner_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_3b076edb</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fir_compiler" xilinx:version="7.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="cmpy" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dds_compiler" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/filt2.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/filt1.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/FIR_2/FIR_2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FIR_2_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/FIR_1/FIR_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FIR_1_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/cMult_0/cMult_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_cMult_0_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/Lo_DDS/Lo_DDS.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_Lo_DDS_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/DDS/DDS.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_DDS_i</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/radio_tuner_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/radio_tuner_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fir_compiler" xilinx:version="7.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_cmpy_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="cmpy" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_dds_compiler_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dds_compiler" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>drivers/radio_tuner_v1_0/data/radio_tuner.mdd</spirit:name>
+        <spirit:userFileType>mdd</spirit:userFileType>
+        <spirit:userFileType>driver_mdd</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/radio_tuner_v1_0/data/radio_tuner.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>driver_tcl</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/radio_tuner_v1_0/src/Makefile</spirit:name>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/radio_tuner_v1_0/src/radio_tuner.h</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/radio_tuner_v1_0/src/radio_tuner.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/radio_tuner_v1_0/src/radio_tuner_selftest.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/radio_tuner_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_0e5443b4</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Lab 7 AXI IP Packaging exercise</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">4</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">radio_tuner_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>radio_tuner_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>jhuapl.edu:user:radio_tuner:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2022-04-03T17:39:17Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76a6acc4_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6bf6a31d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37419847_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@440c7fef_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55d35222_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16b9c183_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c686a58_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@713fa9de_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bad3f16_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3970c893_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@390268f9_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@8a3433e_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b0668b6_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14af8756_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e2e750c_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18c21491_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65a7bec0_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ac37a54_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@395100d0_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7a8678c6_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33f21f50_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a9f746a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@251ecf83_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a68525d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a4f96f6_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@72825553_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@293aa45d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f3b6db3_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7461186d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a797972_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5498347_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c070898_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bf07a45_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6509d046_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@eaa382a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29eff29_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7657bfcc_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a77506a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1de6f732_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7aa561ba_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5aa7a53c_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@197fc456_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b71eb44_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c41ba38_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d425e4a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@40855542_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@632f8001_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3de51198_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e43a250_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a04a0f9_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f1a16e4_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e533542_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15d34f44_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f9c6c37_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b99d80c_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6df3eb55_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4654f2a7_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48231452_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b4d09d3_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71b5d3f7_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c6a3396_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@151ea9f3_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42fe9336_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4cfe4a0a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d7dc324_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@523c0ea7_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@72328819_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1fbb112_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@612b62b0_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10cc37c4_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2bf3c105_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f695b50_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2fda0771_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5b464c19_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2624e924_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1cb15348_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4786a326_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2135b57d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45d444e2_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ce82c1a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@239a69f0_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c5def30_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a578029_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a727d37_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@53064061_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11fff80_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25dcdccb_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@dd076a9_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b881b65_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1543391c_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70b02c41_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68dd49ab_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e06f952_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b83ce51_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36f78ecd_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@63c7f08a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@62a5b62c_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c81bb9d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@bccc0a8_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@21abe798_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1e1eddc1_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f88767_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c1415a8_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c702b24_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2af78b4d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5fd5bc22_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ddb1fa5_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33dc22c9_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3938696a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@248b6f45_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a4a8f3f_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d7599af_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ccfd928_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b6f49e6_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7446d591_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4688a16e_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f70bf21_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ca36260_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e1ede63_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f8bf22c_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1355590d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@482570b1_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5601d38d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79625a22_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e2d4f52_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bf7b334_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ed951a6_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d8949d9_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5818dbc6_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3001c2e7_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6dd67b47_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35b845ce_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@53044946_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ece3a65_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33951b4c_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e0d6ed9_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16f5d55b_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e347740_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@49f03b9f_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79129d8d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@149cbd35_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bbe1db5_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25457527_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@601fb2b8_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44cb3a0a_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@698e7ac1_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2778732b_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2fe485ae_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7be363db_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58fb47a0_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5fcf517e_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65a79051_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54e7953d_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@abf6a57_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@165ce4d6_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b24a916_ARCHIVE_LOCATION">c:/EN525_742_Projects/lab7Files/radio_periph_lab-main/ip_repo/radio_tuner_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="63d2f384"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="af6d13e2"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="8cfd630c"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="9915e389"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
